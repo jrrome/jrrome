@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="408" viewBox="0 0 800 408" role="img" aria-labelledby="title description">
+  <title id="title">jrrome — terminal profile</title>
+  <desc id="description">Jaime Romero Martínez. Santiago de Compostela. Computer Engineering, University of Santiago de Compostela, final year. Website: jaime-romero.com. Email: jromeromartinez@icloud.com.</desc>
+  <rect x="0.5" y="0.5" width="799" height="407" rx="6" fill="#f5f5f3" stroke="#d9dedc" />
+  <path d="M1 38.5H799" stroke="#d9dedc" />
+  <g fill="#303739" font-family="'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" font-weight="400">
+    <text x="20" y="24" fill="#626c70" font-size="11">zsh</text>
+    <text x="400.0" y="24" fill="#626c70" font-size="11" text-anchor="middle">jrrome — ~</text>
+    <text x="30" y="72" fill="#303739">
+      <tspan x="30" fill="#426641">jrrome</tspan>
+      <tspan x="80.4" fill="#626c70">@github</tspan>
+      <tspan x="147.60000000000002" fill="#3d6284">~</tspan>
+      <tspan x="164.4" fill="#426641">$</tspan>
+      <tspan x="181.20000000000002">whoami</tspan>
+    </text>
+    <text x="30" y="98" fill="#303739">Jaime Romero Martínez</text>
+    <text x="30" y="122" fill="#626c70">Santiago de Compostela</text>
+    <text x="30" y="166" fill="#303739">
+      <tspan x="30" fill="#426641">jrrome</tspan>
+      <tspan x="80.4" fill="#626c70">@github</tspan>
+      <tspan x="147.60000000000002" fill="#3d6284">~</tspan>
+      <tspan x="164.4" fill="#426641">$</tspan>
+      <tspan x="181.20000000000002">cat education</tspan>
+    </text>
+    <text x="30" y="192" fill="#626c70">degree</text>
+    <text x="134" y="192" fill="#303739">Computer Engineering</text>
+    <text x="30" y="216" fill="#626c70">university</text>
+    <text x="134" y="216" fill="#303739">University of Santiago de Compostela</text>
+    <text x="30" y="240" fill="#626c70">status</text>
+    <text x="134" y="240" fill="#303739">Final year</text>
+    <text x="30" y="284" fill="#303739">
+      <tspan x="30" fill="#426641">jrrome</tspan>
+      <tspan x="80.4" fill="#626c70">@github</tspan>
+      <tspan x="147.60000000000002" fill="#3d6284">~</tspan>
+      <tspan x="164.4" fill="#426641">$</tspan>
+      <tspan x="181.20000000000002">cat contact</tspan>
+    </text>
+    <text x="30" y="310" fill="#626c70">web</text>
+    <text x="94" y="310" fill="#3d6284">jaime-romero.com</text>
+    <text x="30" y="334" fill="#626c70">email</text>
+    <text x="94" y="334" fill="#3d6284">jromeromartinez@icloud.com</text>
+    <text x="30" y="378" fill="#303739">
+      <tspan x="30" fill="#426641">jrrome</tspan>
+      <tspan x="80.4" fill="#626c70">@github</tspan>
+      <tspan x="147.60000000000002" fill="#3d6284">~</tspan>
+      <tspan x="164.4" fill="#426641">$</tspan>
+    </text>
+    <rect x="181.20000000000002" y="366" width="8" height="15" fill="#303739" />
+  </g>
+</svg>
