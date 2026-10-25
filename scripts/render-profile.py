@@ -35,7 +35,7 @@ def element(parent, tag, **attrs):
 
 def render(theme, mobile=False):
     colors = PALETTES[theme]
-    width, height = (360, 504) if mobile else (800, 408)
+    width, height = (360, 480) if mobile else (800, 384)
     left = 22 if mobile else 30
     svg = ET.Element(f"{{{NS}}}svg", {
         "width": str(width), "height": str(height),
@@ -46,7 +46,7 @@ def render(theme, mobile=False):
     element(svg, "desc", id="description").text = (
         "Jaime Romero Martínez. Santiago de Compostela. "
         "Computer Engineering, University of Santiago de Compostela, final year. "
-        "Website: jaime-romero.com. Email: jromeromartinez@icloud.com."
+        "Email: jromeromartinez@icloud.com."
     )
     element(svg, "rect", x="0.5", y="0.5", width=width - 1, height=height - 1,
             rx=6, fill=colors["background"], stroke=colors["border"])
@@ -92,7 +92,7 @@ def render(theme, mobile=False):
         text("de Compostela", left, 290)
         text("status", left, 316, "muted")
         text("Final year", left, 340)
-        contact_y, end_y = 384, 478
+        contact_y, end_y = 384, 454
     else:
         for y, key, value in (
             (192, "degree", "Computer Engineering"),
@@ -101,15 +101,11 @@ def render(theme, mobile=False):
         ):
             text(key, left, y, "muted")
             text(value, left + 104, y)
-        contact_y, end_y = 284, 378
+        contact_y, end_y = 284, 354
 
     command("cat contact", contact_y)
-    for offset, key, value in (
-        (26, "web", "jaime-romero.com"),
-        (50, "email", "jromeromartinez@icloud.com"),
-    ):
-        text(key, left, contact_y + offset, "muted")
-        text(value, left + 64, contact_y + offset, "link")
+    text("email", left, contact_y + 26, "muted")
+    text("jromeromartinez@icloud.com", left + 64, contact_y + 26, "link")
 
     command("", end_y)
     element(body, "rect", x=left + 18 * 8.4, y=end_y - 12,
