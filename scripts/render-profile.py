@@ -2,6 +2,8 @@
 """Generate the self-contained terminal images used by the profile README."""
 
 from pathlib import Path
+from hashlib import sha256
+import re
 from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -116,10 +118,23 @@ def render(theme, mobile=False):
     output = ASSETS / f"terminal-{suffix}.svg"
     output.write_text(ET.tostring(svg, encoding="unicode") + "\n", encoding="utf-8")
     print(output.relative_to(ROOT))
+    return output.relative_to(ROOT).as_posix(), sha256(output.read_bytes()).hexdigest()[:12]
 
 
 if __name__ == "__main__":
     ASSETS.mkdir(parents=True, exist_ok=True)
+    rendered = []
     for theme in PALETTES:
-        render(theme)
-        render(theme, mobile=True)
+        rendered.append(render(theme))
+        rendered.append(render(theme, mobile=True))
+
+    # A new image URL prevents browsers and GitHub's image proxy serving old content.
+    readme_path = ROOT / "README.md"
+    readme = readme_path.read_text(encoding="utf-8")
+    for asset_path, digest in rendered:
+        readme = re.sub(
+            re.escape(asset_path) + r'(?:\?v=[a-f0-9]+)?(?=")',
+            f"{asset_path}?v={digest}",
+            readme,
+        )
+    readme_path.write_text(readme, encoding="utf-8")
